@@ -6,6 +6,12 @@ import About from "./pages/About";
 function App() {
   return (
     <BrowserRouter>
+      <header>
+        <link>
+        <nav>
+          <link></link>
+        </nav>
+      </header>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About/>}/>
