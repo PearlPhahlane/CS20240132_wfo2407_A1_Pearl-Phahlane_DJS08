@@ -7,15 +7,14 @@ function App() {
   return (
     <BrowserRouter>
       <header>
-        <Link>
+        <Link className="site-logo" to="/">#VanLife</Link>
         <nav>
-          <Link></Link>
+          <Link to="/about">About</Link>
         </nav>
-        </Link>
       </header>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/about" element={<About/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   );
