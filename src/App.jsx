@@ -7,11 +7,11 @@ function App() {
   return (
     <BrowserRouter>
       <header>
-        <link>
+        <Link>
         <nav>
-          <link></link>
+          <Link></Link>
         </nav>
-        </link>
+        </Link>
       </header>
       <Routes>
         <Route path="/" element={<Home/>} />
