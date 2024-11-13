@@ -17,18 +17,23 @@ export default function Vans() {
         ? vans.filter(van => van.type === typeFilter)
         : vans
     
-    const vanElements = displayedVans.map(van => (
-        <div key={van.id} className="van-tile">
-            <Link to={van.id}>
-                <img src={van.imageUrl} />
-                <div className="van-info">
-                    <h3>{van.name}</h3>
-                    <p>${van.price}<span>/day</span></p>
-                </div>
-                <i className={`van-type ${van.type} selected`}>{van.type}</i>
-            </Link>
-        </div>
-    ))
+    const vanElements = displayedVans.map((van) => (
+      <div key={van.id} className="van-tile">
+        <Link to={van.id} 
+                state={{ search: `?${searchParams.toString()}` }}
+        >
+          <img src={van.imageUrl} />
+          <div className="van-info">
+            <h3>{van.name}</h3>
+            <p>
+              ${van.price}
+              <span>/day</span>
+            </p>
+          </div>
+          <i className={`van-type ${van.type} selected`}>{van.type}</i>
+        </Link>
+      </div>
+    ));
 
     function handleFilterChange(key, value) {
         setSearchParams(prevParams => {
