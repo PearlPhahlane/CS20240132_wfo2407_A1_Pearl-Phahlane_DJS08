@@ -1,6 +1,6 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, useParams, Outlet } from "react-router-dom";
+
 
 export default function HostVanDetail() {
 
@@ -38,6 +38,7 @@ export default function HostVanDetail() {
                         <h4>${currentVan.price}/day</h4>
                     </div>
                 </div>
+                <Outlet />
             </div>
         </section>
   );
